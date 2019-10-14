@@ -12,6 +12,6 @@
         android:textSize="22sp"
         android:background="@color/white"
         android:textColor="@color/colorPrimaryDark"
-        android:text="abcdefghi"/>
+        android:text=" "/>
 
 </RelativeLayout>
