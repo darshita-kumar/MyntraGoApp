@@ -43,9 +43,11 @@ import java.util.Random;
 public class Main2Activity extends AppCompatActivity {
 
     int[] products = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight};       //names of product images
-    String[] promos = {"one", "two", "three", "four", "five", "six", "seven", "eight"};       //names of promo codes
-    double rand1 = Math.random()*8;
+    String[] promos = {"Promo code:PQ110 \nValid till 18th Oct 2019", "Promo code:PQ220 \nValid till 20th Oct 2019", "Promo code:PQ330 \nValid till 18th Oct 2019",
+            "Promo code:PQ440 \nValid till 21st Oct 2019", "Promo code:PQ550 \nValid till 19th Oct 2019", "Promo code:PQ660 \nValid till 22nd Oct 2019",
+            "Promo code:PQ770 \nValid till 12th Nov 2019", "Promo code:PQ880 \nValid till 30th Oct 2019"};       //names of promo codes
 
+    double rand1 = Math.random()*8;
     int index = (int)rand1;
 
     private int REQUEST_CODE_PERMISSIONS = 101;
