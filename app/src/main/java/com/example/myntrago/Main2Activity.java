@@ -15,7 +15,10 @@ import androidx.lifecycle.LifecycleOwner;
 
 
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
 import android.graphics.Matrix;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -31,12 +34,19 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Random;
 
 public class Main2Activity extends AppCompatActivity {
 
+    int[] products = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight};       //names of product images
+    String[] promos = {"one", "two", "three", "four", "five", "six", "seven", "eight"};       //names of promo codes
+    double rand1 = Math.random()*8;
+
+    int index = (int)rand1;
 
     private int REQUEST_CODE_PERMISSIONS = 101;
     private final String[] REQUIRED_PERMISSIONS = new String[]{"android.permission.CAMERA", "android.permission.WRITE_EXTERNAL_STORAGE"};
@@ -48,7 +58,9 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         final ImageButton img = (ImageButton)findViewById(R.id.imgCapture);
+
          img.setVisibility(View.INVISIBLE);
+         img.setImageResource(products[index]);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -119,6 +131,9 @@ public class Main2Activity extends AppCompatActivity {
                 int height = RelativeLayout.LayoutParams.WRAP_CONTENT;
                 boolean focusable = true; // lets taps outside the popup also dismiss it
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+                TextView tx=popupView.findViewById(R.id.promo);
+                tx.setText(promos[index]);
 
                 // show the popup window
                 // which view you pass in doesn't matter, it is only used for the window tolken
