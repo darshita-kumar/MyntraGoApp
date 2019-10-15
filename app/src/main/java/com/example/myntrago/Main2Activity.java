@@ -60,7 +60,7 @@ public class Main2Activity extends AppCompatActivity {
 
         final ImageButton img = (ImageButton)findViewById(R.id.imgCapture);
 
-        img.setPadding(0,0,index*50,index*200);
+        img.setPadding(0,0,index*50,index*130);
 
         img.setVisibility(View.INVISIBLE);
         img.setImageResource(products[index]);
