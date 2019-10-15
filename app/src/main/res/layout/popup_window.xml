@@ -5,13 +5,22 @@
 
     <TextView
         android:id="@+id/promo"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="30dp"
         android:textSize="22sp"
-        android:background="@color/white"
         android:textColor="@color/colorPrimaryDark"
-        android:text=" "/>
+        android:shadowColor="@color/grey"
+        android:shadowRadius="5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:typeface="serif"
+        android:text=""/>
 
 </RelativeLayout>
